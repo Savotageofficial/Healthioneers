@@ -1,0 +1,218 @@
+/* General Styles */
+:root {
+  --teal: #0d5f6f;
+  --teal-light: #158f94;
+  --teal-lighter: #58d4e8;
+  --white: #ffffff;
+  --light-bg: #f0f7f9;
+  --accent: #667eea;
+  --accent-dark: #764ba2;
+  --text-dark: #1a1a1a;
+  --text-light: #666666;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--teal);
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 4px 12px rgba(13, 95, 111, 0.3);
+}
+
+.nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--teal-lighter);
+}
+
+.logo a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 25px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.main-nav a:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--teal-lighter);
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover:after {
+  width: 100%;
+}
+
+.main-nav a:hover {
+  color: var(--teal-lighter);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  background: linear-gradient(rgba(10,26,47,0.8), rgba(10,26,47,0.8)),
+              url("../Imgs/hero-bg.jpg") center/cover no-repeat;
+  color: white;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 50px;
+  background: #fff;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  background: #f4f6fb;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card *{
+  margin: 25px;
+}
+.service-card img{
+  margin-top: 10px;
+  border-top-left-radius: 20px; 
+  border-top-right-radius: 20px;   
+  align-self: center;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.service-card h2 {
+  color: #0a1a3c;
+  margin-bottom: 12px;
+}
+
+
+.service-card button {
+
+  appearance: none;
+  background-color: transparent;
+  border: 0.125em solid #1A1A1A;
+  border-radius: 0.9375em;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  min-height: 3.75em;
+  min-width: 0;
+  outline: none;
+  padding: 1em 2.3em;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+.service-card button:disabled {
+  pointer-events: none;
+}
+
+.service-card button:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.service-card button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0a1a3c;
+  color: white;
+  font-size: 0.9rem;
+}
+
+

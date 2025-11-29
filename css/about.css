@@ -1,0 +1,218 @@
+/* ------------------- Global Styles ------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --blue: #0a1a3c; 
+  --white: #ffffff;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: #ffffff;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+.container { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--teal);
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 4px 12px rgba(13, 95, 111, 0.3);
+}
+
+.nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--teal-lighter);
+}
+
+.logo a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 25px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.main-nav a:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--teal-lighter);
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover:after {
+  width: 100%;
+}
+
+.main-nav a:hover {
+  color: var(--teal-lighter);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img{
+    width: 40px;
+    height:40px;
+    border-radius: 50%; 
+}
+
+.logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--blue);
+    text-decoration: none;
+}
+
+/* ------------------- Hero Section ------------------- */
+.page-hero {
+  background: linear-gradient(rgba(10,26,47,0.8), rgba(10,26,47,0.8)),
+              url("../Imgs/hero-bg.jpg") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.page-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.page-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* ------------------- Values Section ------------------- */
+.values {
+  padding: 70px 50px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.values h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #0a1a2f;
+}
+
+.values ul {
+  list-style: none;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.values li {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  border-left: 3px solid #0077ff;
+}
+
+/* ------------------- Footer ------------------- */
+footer {
+  background: #0a1a2f;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 50px;
+}
+
+/* ------------------- Animations ------------------- */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ------------------- Responsive ------------------- */
+@media (max-width: 768px) {
+  nav ul {
+    gap: 15px;
+  }
+
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+
+  .page-hero p {
+    font-size: 1rem;
+  }
+
+  .values {
+    padding: 50px 20px;
+  }
+}

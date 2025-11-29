@@ -1,0 +1,122 @@
+:root {
+  --blue: #0a1f44;
+  --blue-light: #1e3a8a;
+  --white: #ffffff;
+  --muted: #94a3b8;
+}
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--white);
+  color: var(--blue);
+}
+.container { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+
+
+
+/* Header */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--white); border-bottom: 1px solid #e5e7eb;
+}
+.nav-row { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+/* .brand { font-weight: 700; font-size: 1.2rem; color: var(--blue); text-decoration: none; } */
+.main-nav a { margin-left: 20px; color: var(--blue); text-decoration: none; }
+.main-nav a.cta { background: var(--blue); color: white; padding: 8px 14px; border-radius: 8px; }
+.nav-toggle { display: none; }
+
+/* .logo_img {
+  width: 40px;   
+  height: 40px;  
+  border-radius: 50%; 
+  object-fit: cover; 
+} */
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img{
+    width: 40px;
+    height:40px;
+    border-radius: 50%; 
+}
+
+.logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.hero-text {
+  background: linear-gradient(to right, #000428, #004e92);
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+
+.cart-container {
+      padding: 2rem 10%;
+    }
+    .cart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .cart-item img {
+      width: 80px;
+      border-radius: 8px;
+    }
+    .cart-item h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .quantity input {
+      width: 50px;
+      text-align: center;
+      padding: 5px;
+    }
+    .total {
+      text-align: right;
+      margin-top: 2rem;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+    .checkout-btn {
+      display: block;
+      margin-left: auto;
+      margin-top: 1rem;
+      background: #004e92;
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .checkout-btn:hover {
+      background: #ffd700;
+      color: #000;
+    }

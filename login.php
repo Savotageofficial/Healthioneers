@@ -10,6 +10,8 @@ use PHPMailer\PHPMailer\Exception;
 
 // CONFIG
 // abdo
+
+// ya 3amr diab ya ----
 $senderEmail = 'firepanda976@gmail.com';
 $senderName = 'OTP System';
 $senderPassword = 'zuezmonnzpunkjte'; // Gmail App Password
